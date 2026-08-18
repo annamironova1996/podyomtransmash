@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Главная</title>
+        <link rel="stylesheet" href="./css/fonts.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/variables.css" />
+        <link rel="stylesheet" href="./css/choices.min.css" />
+        <link rel="stylesheet" href="./css/swiper-bundle.css" />
+        <link rel="stylesheet" href="./css/template_styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-main">
+                    <a href="index.html" class="header-logo">
+                        <img src="./images/logo.svg" alt="Логотип" width="246" height="48" />
+                    </a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="products.html">Продукция</a>
+                                <ul>
+                                    <li><a href="category-product.html">Мостовые специальные краны</a></li>
+                                    <li><a href="category-product.html">Козловые специальные краны</a></li>
+                                    <li><a href="category-product.html">Судопогрузочные машины</a></li>
+                                    <li><a href="category-product.html">Портальные краны</a></li>
+                                    <li><a href="category-product.html">Вагоноопрокидыватели</a></li>
+                                    <li><a href="category-product.html">Нестандартное оборудование</a></li>
+                                    <li><a href="category-product.html">Реклаймеры</a></li>
+                                    <li><a href="category-product.html">Модернизация и реконструкция ПТО</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="distribution.html">Дистрибуция</a>
+                                <ul>
+                                    <li><a href="category-distribution.html">Мостовые специальные краны</a></li>
+                                    <li><a href="category-distribution.html">Козловые специальные краны</a></li>
+                                    <li><a href="category-distribution.html">Оборудование для судостроения и судоремонта</a></li>
+                                    <li><a href="category-distribution.html">Портальные краны</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="news.html">Новости и статьи</a></li>
+                            <li><a href="questionnaires.html">Опросные листы</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-additional">
+                        <div class="header-contacts">
+                            <button type="button" class="header-contacts__open-btn" aria-label="Открыть контакты">Связаться с нами</button>
+                            <ul class="header-contacts__list">
+                                <li><a href="tel:+7 (812) 708-08-78">+7 (812) 708-08-78</a></li>
+                                <li><a href="mailto:info@pdtm.ru">info@pdtm.ru</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-lang custom-select">
+                            <select data-select>
+                                <option value="ru" data-url="#!" selected>RU</option>
+                                <option value="en" data-url="#!">EN</option>
+                                <option value="de" data-url="#!">DE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="header-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="header-mobile" hidden aria-label="Мобильное меню">
+                    <div class="header-mobile__wrapper">
+                        <nav class="header-mobile__menu hidden-scroll">
+                            <ul>
+                                <li>
+                                    <a href="products.html">Продукция</a>
+                                    <button type="button" class="header-mobile__open-btn" aria-label="Открыть подменю каталога">
+                                        <span class="visually-hidden">Открыть подменю</span>
+                                    </button>
+                                    <ul>
+                                        <li><a href="category-product.html">Мостовые специальные краны</a></li>
+                                        <li><a href="category-product.html">Козловые специальные краны</a></li>
+                                        <li><a href="category-product.html">Судопогрузочные машины</a></li>
+                                        <li><a href="category-product.html">Портальные краны</a></li>
+                                        <li><a href="category-product.html">Вагоноопрокидыватели</a></li>
+                                        <li><a href="category-product.html">Нестандартное оборудование</a></li>
+                                        <li><a href="category-product.html">Реклаймеры</a></li>
+                                        <li><a href="category-product.html">Модернизация и реконструкция ПТО</a></li>
+                                        <li><a href="products.html">Вся продукция</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="distribution.html">Дистрибуция</a>
+                                    <button type="button" class="header-mobile__open-btn" aria-label="Открыть подменю каталога">
+                                        <span class="visually-hidden">Открыть подменю</span>
+                                    </button>
+                                    <ul>
+                                        <li><a href="category-distribution.html">Мостовые специальные краны</a></li>
+                                        <li><a href="category-distribution.html">Козловые специальные краны</a></li>
+                                        <li><a href="category-distribution.html">Оборудование для судостроения и судоремонта</a></li>
+                                        <li><a href="category-distribution.html">Портальные краны</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">О компании</a></li>
+                                <li><a href="news.html">Новости и статьи</a></li>
+                                <li><a href="questionnaires.html">Опросные листы</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header-mobile__bottom">
+                            <a href="" download class="base-button blue-button header-mobile__download"><span>Скачать карту партнера</span><i></i></a>
+                            <div class="header-lang mobile-lang custom-select">
+                                <select data-select>
+                                    <option value="ru" data-url="#!" selected>RU</option>
+                                    <option value="en" data-url="#!">EN</option>
+                                    <option value="de" data-url="#!">DE</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <!-- Баннер -->
+
+            <!-- Технологии, созданные для тяжелой промышленности -->
+            <section class="section">
+                <div class="container">
+                    <div class="title-container title-grid">
+                        <p class="subtitle">продукция</p>
+                        <h2 class="title-2"><strong>Технологии,</strong> созданные для тяжелой промышленности</h2>
+                    </div>
+                    <div class="blocks blocks-col-3">
+                        <div class="block block-bg-1 block-mobile-order-1">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Металлургические<br />краны</h3>
+                                <div class="block-header__icon">
+                                    <!-- выводить, если есть темная иконка  -->
+                                    <div class="block-header__icon-black">
+                                        <img src="./images/block-icon-1-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                    <!-- выводить, если есть светлая иконка  -->
+                                    <div class="block-header__icon-white">
+                                        <img src="./images/block-icon-1-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-1 block-span-2 block-mobile-order-3">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Оборудование для&nbsp;судостроения и&nbsp;судоремонта</h3>
+                                <div class="block-header__icon">
+                                    <!-- выводить, если есть темная иконка  -->
+                                    <div class="block-header__icon-black">
+                                        <img src="./images/block-icon-2-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                    <!-- выводить, если есть светлая иконка  -->
+                                    <div class="block-header__icon-white">
+                                        <img src="./images/block-icon-2-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-2 block-mobile-order-4">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Испытательные и технологические стенды</h3>
+                                <div class="block-header__icon">
+                                    <!-- выводить, если есть темная иконка  -->
+                                    <div class="block-header__icon-black">
+                                        <img src="./images/block-icon-3-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                    <!-- выводить, если есть светлая иконка  -->
+                                    <div class="block-header__icon-white">
+                                        <img src="./images/block-icon-3-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-2 block-mobile-order-2">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Судопогрузочные машины</h3>
+                                <div class="block-header__icon">
+                                    <!-- выводить, если есть темная иконка  -->
+                                    <div class="block-header__icon-black">
+                                        <img src="./images/block-icon-4-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                    <!-- выводить, если есть светлая иконка  -->
+                                    <div class="block-header__icon-white">
+                                        <img src="./images/block-icon-4-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-3 block-mobile-order-5">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Каталог<br />продукции</h3>
+                                <div class="block-header__icon">
+                                    <!-- выводить, если есть светлая иконка  -->
+                                    <div class="block-header__icon-white">
+                                        <img src="./images/block-icon-5-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Наша работа впечатляет -->
+            <section class="section">
+                <div class="container">
+                    <div class="title-container title-column">
+                        <p class="subtitle">реализованные проекты</p>
+                        <div class="title-row">
+                            <h2 class="title-2"><strong>Наша работа</strong> впечатляет</h2>
+                            <div class="slider-buttons">
+                                <button class="slider-button slider-button--prev" aria-label="Предыдущий слайд"></button>
+                                <button class="slider-button slider-button--next" aria-label="Следующий слайд"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper slider slider-3 slider-visible">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="product-item.html" class="product-slide">
+                                    <div class="product-slide__image">
+                                        <!-- основное изображение  -->
+                                        <div class="product-slide__image-front">
+                                            <img src="./images/product-slide-1.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <!-- изображение при наведении  -->
+                                        <div class="product-slide__image-back">
+                                            <img src="./images/product-slide-2.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
+                                    </div>
+                                    <div class="product-slide__info">
+                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
+                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
+                                    </div>
+                                    <ul class="product-slide__info-tags">
+                                        <li><p>Козловой кран</p></li>
+                                        <li><p>Металлургия</p></li>
+                                        <li><address>Санкт-Петербург</address></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product-item.html" class="product-slide">
+                                    <div class="product-slide__image">
+                                        <!-- основное изображение  -->
+                                        <div class="product-slide__image-front">
+                                            <img src="./images/product-slide-2.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <!-- изображение при наведении  -->
+                                        <div class="product-slide__image-back">
+                                            <img src="./images/product-slide-3.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
+                                    </div>
+                                    <div class="product-slide__info">
+                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
+                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
+                                    </div>
+                                    <ul class="product-slide__info-tags">
+                                        <li><p>Козловой кран</p></li>
+                                        <li><p>Металлургия</p></li>
+                                        <li><address>Санкт-Петербург</address></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product-item.html" class="product-slide">
+                                    <div class="product-slide__image">
+                                        <!-- основное изображение  -->
+                                        <div class="product-slide__image-front">
+                                            <img src="./images/product-slide-3.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <!-- изображение при наведении  -->
+                                        <div class="product-slide__image-back">
+                                            <img src="./images/product-slide-4.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
+                                    </div>
+                                    <div class="product-slide__info">
+                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
+                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
+                                    </div>
+                                    <ul class="product-slide__info-tags">
+                                        <li><p>Козловой кран</p></li>
+                                        <li><p>Металлургия</p></li>
+                                        <li><address>Санкт-Петербург</address></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product-item.html" class="product-slide">
+                                    <div class="product-slide__image">
+                                        <!-- основное изображение  -->
+                                        <div class="product-slide__image-front">
+                                            <img src="./images/product-slide-4.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <!-- изображение при наведении  -->
+                                        <div class="product-slide__image-back">
+                                            <img src="./images/product-slide-5.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
+                                    </div>
+                                    <div class="product-slide__info">
+                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
+                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
+                                    </div>
+                                    <ul class="product-slide__info-tags">
+                                        <li><p>Козловой кран</p></li>
+                                        <li><p>Металлургия</p></li>
+                                        <li><address>Санкт-Петербург</address></li>
+                                    </ul>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="product-item.html" class="product-slide">
+                                    <div class="product-slide__image">
+                                        <!-- основное изображение  -->
+                                        <div class="product-slide__image-front">
+                                            <img src="./images/product-slide-5.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <!-- изображение при наведении  -->
+                                        <div class="product-slide__image-back">
+                                            <img src="./images/product-slide-1.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
+                                        </div>
+                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
+                                    </div>
+                                    <div class="product-slide__info">
+                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
+                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
+                                    </div>
+                                    <ul class="product-slide__info-tags">
+                                        <li><p>Козловой кран</p></li>
+                                        <li><p>Металлургия</p></li>
+                                        <li><address>Санкт-Петербург</address></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Создаем инженерные решения, которые двигают промышленность -->
+            <section class="section section-background" data-lazy-desktop="./images/section-background-1-desktop.webp" data-lazy-mobile="./images/section-background-1-mobile.webp">
+                <div class="container">
+                    <div class="content-small">
+                        <div class="title-container title-column">
+                            <p class="subtitle">о компании</p>
+                            <h2 class="title-2">Создаем инженерные решения, которые <strong>двигают промышленность</strong></h2>
+                        </div>
+                        <div class="content-text">
+                            <strong>
+                                <p>Проектируем и производим уникальное грузоподъемное и перегрузочное оборудование для предприятий тяжелой промышленности, портовой инфраструктуры и судостроения.</p>
+                            </strong>
+                            <p>От идеи и проектирования до изготовления, монтажа и ввода в эксплуатацию — сопровождаем каждый проект на всех этапах. Более чем за годы работы реализовали десятки сложных инженерных решений, доказав надежность оборудования в самых требовательных условиях эксплуатации.</p>
+                            <a href="about.html" class="base-button blue-button content-text__link"><span>Узнать больше о компании</span><i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Нас выбирают лидеры отрасли -->
+            <section class="section">
+                <div class="container">
+                    <div class="title-container title-column">
+                        <p class="subtitle">пресс-центр</p>
+                        <div class="title-row">
+                            <h2 class="title-2">Упоминания в <strong>СМИ</strong></h2>
+                            <div class="slider-buttons">
+                                <button class="slider-button slider-button--prev" aria-label="Предыдущий слайд"></button>
+                                <button class="slider-button slider-button--next" aria-label="Следующий слайд"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper slider slider-4 slider-visible news-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news-slide">
+                                    <div class="news-slide__image">
+                                        <img src="./images/news-slide-1.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="375" />
+                                    </div>
+                                    <div class="news-slide__content">
+                                        <div class="news-slide__content-body">
+                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
+                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
+                                        </div>
+                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-slide">
+                                    <div class="news-slide__image">
+                                        <img src="./images/news-slide-2.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="280" />
+                                    </div>
+                                    <div class="news-slide__content">
+                                        <div class="news-slide__content-body">
+                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
+                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
+                                        </div>
+                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-slide">
+                                    <div class="news-slide__image">
+                                        <img src="./images/news-slide-3.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="460" />
+                                    </div>
+                                    <div class="news-slide__content">
+                                        <div class="news-slide__content-body">
+                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
+                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
+                                        </div>
+                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-slide">
+                                    <div class="news-slide__image">
+                                        <img src="./images/news-slide-1.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="375" />
+                                    </div>
+                                    <div class="news-slide__content">
+                                        <div class="news-slide__content-body">
+                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
+                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
+                                        </div>
+                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-slide">
+                                    <div class="news-slide__image">
+                                        <img src="./images/news-slide-2.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="280" />
+                                    </div>
+                                    <div class="news-slide__content">
+                                        <div class="news-slide__content-body">
+                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
+                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
+                                        </div>
+                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-slide">
+                                    <div class="news-slide__image">
+                                        <img src="./images/news-slide-3.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="460" />
+                                    </div>
+                                    <div class="news-slide__content">
+                                        <div class="news-slide__content-body">
+                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
+                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
+                                        </div>
+                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="blocks blocks-col-2">
+                        <div class="block block-bg-3 block-lg" data-lazy-desktop="./images/block-lg-1-desktop.webp" data-lazy-mobile="./images/block-lg-1-mobile.webp">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Наша продукция</h3>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="products.html" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-1 block-lg" data-lazy-desktop="./images/block-lg-2-desktop.webp" data-lazy-mobile="./images/block-lg-2-mobile.webp">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Дистрибуция</h3>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="distribution.html" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid-2">
+                        <div class="contacts">
+                            <div class="title-column contacts-title">
+                                <p class="subtitle">мы на связи</p>
+                                <h2 class="title-2">Наши <strong>контакты</strong></h2>
+                            </div>
+                            <ul class="contacts-info">
+                                <li>
+                                    <p>адрес</p>
+                                    <address>192029, Россия, Санкт-Петербург, Большой Смоленский проспект, д.2</address>
+                                </li>
+                                <li>
+                                    <p>телефон для связи</p>
+                                    <a href="tel:+7 (812) 708-88-78">+7 (812) 708-88-78</a>
+                                </li>
+                                <li>
+                                    <p>электронная почта</p>
+                                    <a href="mailto:info@pdtm.ru">info@pdtm.ru</a>
+                                </li>
+                                <li>
+                                    <p>наши социальные сети</p>
+                                    <ul class="contacts-info__socials">
+                                        <li>
+                                            <a href="https://rutube.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Rutube">
+                                                <img src="./images/rutube.svg" alt="Иконка Rutube" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал YouTube">
+                                                <img src="./images/youtube.svg" alt="Иконка YouTube" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://vk.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Vk">
+                                                <img src="./images/vk.svg" alt="Иконка Vk" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://telegram.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Telegram">
+                                                <img src="./images/telegram.svg" alt="Иконка Telegram" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://max.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Max">
+                                                <img src="./images/max.svg" alt="Иконка Max" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dzen.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Dzen">
+                                                <img src="./images/dzen.svg" alt="Иконка Dzen" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="contacts-document">
+                                <div class="contacts-document__icon">
+                                    <img src="./images/document.svg" alt="Иконка документа" width="64" height="64" loading="lazy" />
+                                </div>
+                                <div class="contacts-document__content">
+                                    <h3 class="title-4 contacts-document__title">Документы и лицензии</h3>
+                                    <a href="documents-credentials.html" class="link contacts-document__link"><span>Перейти в раздел</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form">
+                            <div class="form-inner">
+                                <label for="company" class="visually-hidden">Название компании</label>
+                                <input type="text" name="company" id="company" placeholder="Название компании*" required />
+                                <!-- выводить, если есть ошибка  -->
+                                <!-- <span class="form-error">Текст ошибки</span> -->
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-inner">
+                                    <label for="name" class="visually-hidden">Ваше Имя</label>
+                                    <input type="text" name="name" id="name" placeholder="Ваше Имя*" required />
+                                    <!-- выводить, если есть ошибка  -->
+                                    <!-- <span class="form-error">Текст ошибки</span> -->
+                                </div>
+                                <div class="form-inner">
+                                    <label for="job_title" class="visually-hidden">Должность</label>
+                                    <input type="text" name="job_title" id="job_title" placeholder="Должность" />
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-inner">
+                                    <label for="phone" class="visually-hidden">Телефон*</label>
+                                    <input type="text" name="phone" id="phone" placeholder="Телефон*" required />
+                                    <!-- выводить, если есть ошибка  -->
+                                    <!-- <span class="form-error">Текст ошибки</span> -->
+                                </div>
+                                <div class="form-inner">
+                                    <label for="email" class="visually-hidden">Электронная почта*</label>
+                                    <input type="email" name="email" id="email" placeholder="Электронная почта*" required />
+                                    <!-- выводить, если есть ошибка  -->
+                                    <!-- <span class="form-error">Текст ошибки</span> -->
+                                </div>
+                            </div>
+                            <div class="form-inner">
+                                <label for="message" class="visually-hidden">Расскажите подробнее о том, что вам потребуется</label>
+                                <textarea id="message" name="message" placeholder="Расскажите подробнее о том, что вам потребуется"></textarea>
+                            </div>
+                            <div class="form-file">
+                                <div class="form-file__inner">
+                                    <div class="form-file__btn">
+                                        <input type="file" name="file" id="file" accept=".png, .jpeg, .pdf" />
+                                        <button type="button">прикрепить файл</button>
+                                    </div>
+                                    <p class="form-file__name">Файл не выбран</p>
+                                </div>
+                                <p class="form-file__warning">Файл не более 5 мб, в формате png, jpeg, pdf</p>
+                                <!-- выводить, если есть ошибка  -->
+                                <!-- <span class="form-error">Текст ошибки</span> -->
+                            </div>
+                            <button type="submit" class="base-button blue-button form-button"><span>Отправить форму</span><i></i></button>
+                            <div class="form-checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox" required />
+                                <label for="checkbox">Нажимая на кнопку, я даю согласие на обработку своих персональных данных в соответствии с&nbsp;<a href="policy.html">Условиями Политики</a></label>
+                                <!-- выводить, если есть ошибка  -->
+                                <!-- <span class="form-error">Текст ошибки</span> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-top">
+                        <a href="index.html" class="footer-top__logo">
+                            <img src="./images/logo.svg" alt="Логотип" width="287" height="56" loading="lazy" />
+                        </a>
+                        <nav class="footer-top__menu">
+                            <ul>
+                                <li><a href="about.html">О компании</a></li>
+                                <li><a href="news.html">Новости и статьи</a></li>
+                                <li><a href="questionnaires.html">Опросные листы</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-center">
+                        <div class="footer-center__navs">
+                            <nav class="footer-center__nav">
+                                <p class="footer-center__nav-title">Продукция</p>
+                                <ul class="footer-center__nav-list">
+                                    <li><a href="category-product.html">Грузоподъемное оборудование</a></li>
+                                    <li><a href="category-product.html">Оборудование для перевалки сыпучих грузов</a></li>
+                                    <li><a href="category-product.html">Стендовое оборудование</a></li>
+                                    <li><a href="category-product.html">Нестандартное оборудование</a></li>
+                                    <li><a href="category-product.html">Оборудование для судостроения и судоремонта</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="footer-center__nav">
+                                <p class="footer-center__nav-title">Дистрибуция</p>
+                                <ul class="footer-center__nav-list">
+                                    <li><a href="category-distribution.html">Название категории из дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название еще одной категории дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название категории из дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название категории из дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название еще одной категории дистрибуции</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <ul class="footer-center__contacts">
+                            <li>
+                                <p class="footer-center__contacts-title">наши социальные сети</p>
+                                <ul class="footer-center__socials">
+                                    <li>
+                                        <a href="https://rutube.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Rutube">
+                                            <img src="./images/rutube.svg" alt="Иконка Rutube" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал YouTube">
+                                            <img src="./images/youtube.svg" alt="Иконка YouTube" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://vk.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Vk">
+                                            <img src="./images/vk.svg" alt="Иконка Vk" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://telegram.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Telegram">
+                                            <img src="./images/telegram.svg" alt="Иконка Telegram" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://max.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Max">
+                                            <img src="./images/max.svg" alt="Иконка Max" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dzen.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Dzen">
+                                            <img src="./images/dzen.svg" alt="Иконка Dzen" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="footer-center__contacts-title">телефон для связи</p>
+                                <ul class="footer-center__contact">
+                                    <li><a href="tel:+7 (812) 708-88-78">+7 (812) 708-88-78</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="footer-center__contacts-title">электронная почта</p>
+                                <ul class="footer-center__contact">
+                                    <li><a href="mailto:info@pdtm.ru">info@pdtm.ru</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" download class="base-button white-button footer-center__download"><span>Скачать карту партнера</span><i></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>© 2026 ООО «ПО «Подъемтрансмаш»</p>
+                        <a href="#!" target="_blank" rel="noopener noreferrer">Карта сайта</a>
+                        <a href="policy.html">Политика конфиденциальности</a>
+                        <a href="terms-of-service.html">Правила пользования сайтом</a>
+                        <div class="footer-bottom__developer">
+                            <p>Разработка сайта:</p>
+                            <a href="#!" target="_blank" rel="noopener noreferrer">
+                                <img src="./images/developer-logo.svg" alt="Логотип Крупное Дело" width="83" height="30" loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/choices.min.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

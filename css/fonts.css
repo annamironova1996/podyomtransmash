@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/Boxed/BoxedLight.eot');
+    src: url('../fonts/Boxed/BoxedLight.eot?#iefix') format('embedded-opentype'), url('../fonts/Boxed/BoxedLight.woff2') format('woff2'), url('../fonts/Boxed/BoxedLight.woff') format('woff'), url('../fonts/Boxed/BoxedLight.ttf') format('truetype'), url('../fonts/Boxed/BoxedLight.svg#BoxedLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/Boxed/BoxedRegular.eot');
+    src: url('../fonts/Boxed/BoxedRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/Boxed/BoxedRegular.woff2') format('woff2'), url('../fonts/Boxed/BoxedRegular.woff') format('woff'), url('../fonts/Boxed/BoxedRegular.ttf') format('truetype'), url('../fonts/Boxed/BoxedRegular.svg#BoxedRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/Boxed/BoxedMedium.eot');
+    src: url('../fonts/Boxed/BoxedMedium.eot?#iefix') format('embedded-opentype'), url('../fonts/Boxed/BoxedMedium.woff2') format('woff2'), url('../fonts/Boxed/BoxedMedium.woff') format('woff'), url('../fonts/Boxed/BoxedMedium.ttf') format('truetype'), url('../fonts/Boxed/BoxedMedium.svg#BoxedMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/Boxed/BoxedBook.eot');
+    src: url('../fonts/Boxed/BoxedBook.eot?#iefix') format('embedded-opentype'), url('../fonts/Boxed/BoxedBook.woff2') format('woff2'), url('../fonts/Boxed/BoxedBook.woff') format('woff'), url('../fonts/Boxed/BoxedBook.ttf') format('truetype'), url('../fonts/Boxed/BoxedBook.svg#BoxedBook') format('svg');
+    font-weight: 450;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Light.eot');
+    src: url('../fonts/Inter/Inter-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Inter/Inter-Light.woff2') format('woff2'), url('../fonts/Inter/Inter-Light.woff') format('woff'), url('../fonts/Inter/Inter-Light.ttf') format('truetype'), url('../fonts/Inter/Inter-Light.svg#Inter-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Regular.eot');
+    src: url('../fonts/Inter/Inter-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Inter/Inter-Regular.woff2') format('woff2'), url('../fonts/Inter/Inter-Regular.woff') format('woff'), url('../fonts/Inter/Inter-Regular.ttf') format('truetype'), url('../fonts/Inter/Inter-Regular.svg#Inter-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Invole/Involve-Regular.eot');
+    src: url('../fonts/Invole/Involve-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Invole/Involve-Regular.woff2') format('woff2'), url('../fonts/Invole/Involve-Regular.woff') format('woff'), url('../fonts/Invole/Involve-Regular.ttf') format('truetype'), url('../fonts/Invole/Involve-Regular.svg#Involve-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway-v4020';
+    src: url('../fonts/Raleway/Raleway-v4020-Regular.eot');
+    src: url('../fonts/Raleway/Raleway-v4020-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Raleway/Raleway-v4020-Regular.woff2') format('woff2'), url('../fonts/Raleway/Raleway-v4020-Regular.woff') format('woff'), url('../fonts/Raleway/Raleway-v4020-Regular.ttf') format('truetype'), url('../fonts/Raleway/Raleway-v4020-Regular.svg#Raleway-v4020-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

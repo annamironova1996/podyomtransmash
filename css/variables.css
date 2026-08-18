@@ -1,0 +1,26 @@
+:root {
+    --font-family: 'Boxed', sans-serif;
+    --second-family: 'Inter', sans-serif;
+    --third-family: 'Involve', sans-serif;
+    --accent-font: 'Raleway', sans-serif;
+
+    --primary: #172630;
+    --accent: #0060a4;
+    --background-1: #f5f5f5;
+    --background-2: #e6edf3;
+    --background-3: #f7f7f7;
+    --background-4: #f5fafe;
+    --base-white: #fff;
+    --base-black: #000;
+    --base-red: #f50000;
+    --opacity-accent: rgba(0, 96, 164, 0.8);
+    --opacity-white-80: rgba(255, 255, 255, 0.8);
+    --opacity-white-70: rgba(255, 255, 255, 0.8);
+    --opacity-white-20: rgba(255, 255, 255, 0.2);
+    --opacity-primary-80: rgb(23, 38, 48, 0.8);
+    --opacity-primary-70: rgb(23, 38, 48, 0.7);
+    --opacity-primary-60: rgb(23, 38, 48, 0.6);
+    --opacity-primary-50: rgb(23, 38, 48, 0.5);
+    --opacity-primary-40: rgb(23, 38, 48, 0.4);
+    --border-color: rgba(23, 38, 48, 0.15);
+}
