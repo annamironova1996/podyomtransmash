@@ -23,4 +23,5 @@
     --opacity-primary-50: rgb(23, 38, 48, 0.5);
     --opacity-primary-40: rgb(23, 38, 48, 0.4);
     --border-color: rgba(23, 38, 48, 0.15);
+    --modal-bg: rgba(52, 52, 52, 0.2);
 }

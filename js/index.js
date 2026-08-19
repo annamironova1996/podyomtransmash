@@ -122,6 +122,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Слайдер (2)
+    const slider2 = document.querySelectorAll('.slider-2');
+    if (slider2) {
+        slider2.forEach((slider) => {
+            const parent = slider.closest('.section');
+            const prevEl = parent.querySelector('.slider-button--prev');
+            const nextEl = parent.querySelector('.slider-button--next');
+
+            const swiper = new Swiper(slider, {
+                slidesPerView: 'auto',
+                spaceBetween: 14,
+                breakpoints: {
+                    992: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                },
+                navigation: {
+                    nextEl: nextEl,
+                    prevEl: prevEl,
+                },
+            });
+        });
+    }
+
     // Слайдер (3)
     const slider3 = document.querySelectorAll('.slider-3');
     if (slider3) {
@@ -204,17 +229,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             input.addEventListener('change', function () {
                 if (this.files && this.files.length > 0) {
-                    // Показываем имя файла
                     fileNameElement.textContent = this.files[0].name;
                     fileNameElement.classList.add('selected');
                 } else {
-                    // Возвращаем стандартный текст
                     fileNameElement.textContent = 'Файл не выбран';
                     fileNameElement.classList.remove('selected');
                 }
             });
 
-            // Дополнительно: сброс при клике на кнопку "прикрепить файл"
             const button = input.closest('.form-file__btn').querySelector('button');
             if (button) {
                 button.addEventListener('click', function (e) {
@@ -222,6 +244,104 @@ document.addEventListener('DOMContentLoaded', function () {
                     input.click();
                 });
             }
+        });
+    }
+
+    // Модальное окно для сертификата
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: false,
+        autoplayVideos: true,
+        title: true,
+        openEffect: 'fade',
+        closeEffect: 'fade',
+        slideEffect: 'slide',
+        moreLength: 60,
+        arrows: true,
+        closeButton: true,
+    });
+
+    window.lightbox = lightbox;
+
+    function addCustomCloseButton() {
+        document.querySelectorAll('.gslide-media').forEach(function (media) {
+            const slide = media.closest('.gslide');
+            if (!slide) return;
+
+            if (media.querySelector('.gslide-custom-close')) return;
+
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'gslide-custom-close';
+
+            closeBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (window.lightbox) {
+                    window.lightbox.close();
+                }
+            });
+
+            media.style.position = 'relative';
+            media.appendChild(closeBtn);
+
+            const originalClose = slide.querySelector('.gslide-close');
+            if (originalClose) {
+                originalClose.style.display = 'none';
+            }
+        });
+    }
+
+    lightbox.on('open', function () {
+        setTimeout(addCustomCloseButton, 50);
+    });
+
+    lightbox.on('slide_changed', function () {
+        setTimeout(addCustomCloseButton, 50);
+    });
+
+    setTimeout(addCustomCloseButton, 200);
+
+    // Табы
+    const tabsContainers = document.querySelectorAll('[data-tabs]');
+
+    if (tabsContainers) {
+        tabsContainers.forEach((container, index) => {
+            const tabButtons = container.querySelectorAll('.tabs-item');
+            const tabContents = container.querySelectorAll('.tab-content');
+            const storageKey = `activeTab_${index}`;
+
+            function activateTab(tabId) {
+                tabButtons.forEach((btn) => btn.classList.remove('active'));
+                tabContents.forEach((content) => content.classList.remove('active'));
+
+                const activeButton = container.querySelector(`[data-tab="${tabId}"]`);
+                if (activeButton) activeButton.classList.add('active');
+
+                const activeContent = container.querySelector(`[data-tab-content="${tabId}"]`);
+                if (activeContent) activeContent.classList.add('active');
+
+                try {
+                    localStorage.setItem(storageKey, tabId);
+                } catch (e) {}
+            }
+
+            const savedTab = localStorage.getItem(storageKey);
+            const defaultTab = container.querySelector('.tabs-item.active');
+
+            if (savedTab && container.querySelector(`[data-tab="${savedTab}"]`)) {
+                activateTab(savedTab);
+            } else if (defaultTab) {
+                activateTab(defaultTab.getAttribute('data-tab'));
+            } else if (tabButtons.length > 0) {
+                activateTab(tabButtons[0].getAttribute('data-tab'));
+            }
+
+            tabButtons.forEach((button) => {
+                button.addEventListener('click', function () {
+                    const tabId = this.getAttribute('data-tab');
+                    activateTab(tabId);
+                });
+            });
         });
     }
 

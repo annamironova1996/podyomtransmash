@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./css/variables.css" />
         <link rel="stylesheet" href="./css/choices.min.css" />
         <link rel="stylesheet" href="./css/swiper-bundle.css" />
+        <link rel="stylesheet" href="./css/glightbox.min.css" />
         <link rel="stylesheet" href="./css/template_styles.css" />
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
@@ -125,383 +126,350 @@
             </div>
         </header>
         <main class="main">
-            <!-- Баннер -->
+            <!-- Хлебные крошки  -->
+            <section class="breadcrumbs">
+                <div class="container">
+                    <nav class="breadcrumbs-nav" aria-label="Хлебные крошки">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="./index.html">Главная</a></li>
+                            <li><span>Продукция</span></li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="breadcrumbs-back" onclick="history.back()">Назад</button>
+                </div>
+            </section>
 
-            <!-- Технологии, созданные для тяжелой промышленности -->
+            <!-- Продукция -->
+            <section class="section">
+                <div class="container">
+                    <h1 class="title-1 page-title">Продукция</h1>
+                    <div class="custom-grid">
+                        <!-- 1 ряд: 3 одинаковых блока -->
+                        <!-- классы block-bg-1, block-bg-2, block-bg-3 отвечают за цвет фона блока  -->
+                        <!-- block-bg-1 - #e6edf3; -->
+                        <!-- block-bg-2 - #f5f5f5; -->
+                        <!-- block-bg-3 - #0060a4; -->
+                        <div class="grid-item">
+                            <div class="block block-bg-1">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Мостовые специальные краны</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-1-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-1-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="block block-bg-2">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Козловые специальные краны</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-1-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-1-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="block block-bg-3">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Оборудование для&nbsp;судостроения и&nbsp;судоремонта</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-1-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <a href="" class="link block-body__link"><span>Перейти на сайт направления</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 ряд: 2 одинаковых блока -->
+                        <div class="grid-item">
+                            <div class="block block-bg-2">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Судопогрузочные машины</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-3-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-3-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="block block-bg-1">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Портальные<br />краны</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-4-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-4-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 ряд: 1 блок (1 колонка) + 1 блок (2 колонки) -->
+                        <div class="grid-item">
+                            <div class="block block-bg-3">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Испытательные и технологические стенды</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-1-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <a href="" class="link block-body__link"><span>Перейти на сайт направления</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item grid-item--double">
+                            <div class="block block-bg-2">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Вагоноопрокидыва&shy;тели</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-3-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-3-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 ряд: 2 одинаковых блока -->
+                        <div class="grid-item">
+                            <div class="block block-bg-2">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Нестандартное оборудование</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-3-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-3-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="block block-bg-2">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Реклаймеры</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-2-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-2-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5 ряд: 1 блок на всю ширину -->
+                        <div class="grid-item grid-item--full">
+                            <div class="block block-bg-1">
+                                <div class="block-header">
+                                    <h3 class="block-header__title title-3">Модернизация и реконструкция ПТО</h3>
+                                    <div class="block-header__icon">
+                                        <!-- выводить, если есть темная иконка  -->
+                                        <div class="block-header__icon-black">
+                                            <img src="./images/block-icon-3-black.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                        <!-- выводить, если есть светлая иконка  -->
+                                        <div class="block-header__icon-white">
+                                            <img src="./images/block-icon-3-white.svg" alt="Иконка" width="68" height="68" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-body">
+                                    <div class="block-body__text">
+                                        <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                    </div>
+                                    <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Документы в порядке -->
             <section class="section">
                 <div class="container">
                     <div class="title-container title-grid">
-                        <p class="subtitle">продукция</p>
-                        <h2 class="title-2"><strong>Технологии,</strong> созданные для тяжелой промышленности</h2>
+                        <p class="subtitle">сертификаты и лицензии</p>
+                        <h2 class="title-2">Документы <strong>в&nbsp;порядке</strong></h2>
                     </div>
-                    <div class="blocks blocks-col-3">
-                        <!--   классы block-bg-1, block-bg-2, block-bg-3 отвечают за цвет фона блока  -->
-                        <div class="block block-bg-1 block-mobile-order-1">
-                            <div class="block-header">
-                                <h3 class="block-header__title title-3">Металлургические<br />краны</h3>
-                                <div class="block-header__icon">
-                                    <!-- выводить, если есть темная иконка  -->
-                                    <div class="block-header__icon-black">
-                                        <img src="./images/block-icon-1-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                    <!-- выводить, если есть светлая иконка  -->
-                                    <div class="block-header__icon-white">
-                                        <img src="./images/block-icon-1-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
+                    <div class="content-grid" data-tabs>
+                        <ul class="tabs tabs-vertical hidden-scroll">
+                            <li><button type="button" class="tabs-item active" data-tab="tab-certificates">Сертификаты и лицензии</button></li>
+                            <li><button type="button" class="tabs-item" data-tab="tab-documents">Презентации и буклеты</button></li>
+                        </ul>
+                        <div class="tabs-content">
+                            <div class="tab-content" data-tab-content="tab-certificates">
+                                <div class="tab-content__text">
+                                    <p>Интересно отметить, что восприятие марки спонтанно стабилизирует креатив, полагаясь на инсайдерскую информацию. Интересно отметить, что восприятие марки спонтанно стабилизирует креатив, полагаясь на инсайдерскую информацию.</p>
+                                </div>
+                                <div class="swiper slider slider-2 certificates-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <!--  нужно указывать заголовок в data-title, он отображается при открытии модального окна  -->
+                                            <a href="./images/certificate.webp" class="glightbox certificate certificate-small" data-title="Краны портальные перегрузочные КПП и монтажные КПМ грузоподъемностью от 5 до 160 тонн включительно. Серийный выпуск.">
+                                                <div class="certificate-image">
+                                                    <img src="./images/certificate.webp" alt="Краны портальные перегрузочные КПП и монтажные КПМ грузоподъемностью от 5 до 160 тонн включительно. Серийный выпуск." width="132" height="187" loading="lazy" />
+                                                </div>
+                                                <div class="certificate-content">
+                                                    <h3 class="certificate-content__title">Краны портальные перегрузочные КПП и монтажные КПМ грузоподъемностью от 5 до 160 тонн включительно. Серийный выпуск.</h3>
+                                                    <ul class="certificate-content__list">
+                                                        <li>Сертификат соответствия, до 20 января 2030 года</li>
+                                                        <li>Регистрационный номер ЕАЭС RU С-RU.МХ17.В.00580/25</li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!--  нужно указывать заголовок в data-title, он отображается при открытии модального окна  -->
+                                            <a href="./images/certificate.webp" class="glightbox certificate certificate-small" data-title="Краны портальные перегрузочные КПП и монтажные КПМ грузоподъемностью от 5 до 160 тонн включительно. Серийный выпуск.">
+                                                <div class="certificate-image">
+                                                    <img src="./images/certificate.webp" alt="Краны портальные перегрузочные КПП и монтажные КПМ грузоподъемностью от 5 до 160 тонн включительно. Серийный выпуск." width="132" height="187" loading="lazy" />
+                                                </div>
+                                                <div class="certificate-content">
+                                                    <h3 class="certificate-content__title">Краны портальные перегрузочные КПП и монтажные КПМ грузоподъемностью от 5 до 160 тонн включительно. Серийный выпуск.</h3>
+                                                    <ul class="certificate-content__list">
+                                                        <li>Сертификат соответствия, до 20 января 2030 года</li>
+                                                        <li>Регистрационный номер ЕАЭС RU С-RU.МХ17.В.00580/25</li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="documents-credentials.html" class="base-button blue-button tab-content__link"><span>Смотреть все сертификаты и лицензии</span><i></i></a>
                             </div>
-                            <div class="block-body">
-                                <div class="block-body__text">
-                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                            <div class="tab-content" data-tab-content="tab-documents">
+                                <div class="tab-content__text">
+                                    <p>Интересно отметить, что восприятие марки спонтанно стабилизирует креатив, полагаясь на инсайдерскую информацию. Интересно отметить, что восприятие марки спонтанно стабилизирует креатив, полагаясь на инсайдерскую информацию.</p>
                                 </div>
-                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
-                            </div>
-                        </div>
-                        <!--   классы block-bg-1, block-bg-2, block-bg-3 отвечают за цвет фона блока  -->
-                        <div class="block block-bg-1 block-span-2 block-mobile-order-3">
-                            <div class="block-header">
-                                <h3 class="block-header__title title-3">Оборудование для&nbsp;судостроения и&nbsp;судоремонта</h3>
-                                <div class="block-header__icon">
-                                    <!-- выводить, если есть темная иконка  -->
-                                    <div class="block-header__icon-black">
-                                        <img src="./images/block-icon-2-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                    <!-- выводить, если есть светлая иконка  -->
-                                    <div class="block-header__icon-white">
-                                        <img src="./images/block-icon-2-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-body">
-                                <div class="block-body__text">
-                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
-                                </div>
-                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
-                            </div>
-                        </div>
-                        <!--   классы block-bg-1, block-bg-2, block-bg-3 отвечают за цвет фона блока  -->
-                        <div class="block block-bg-2 block-mobile-order-4">
-                            <div class="block-header">
-                                <h3 class="block-header__title title-3">Испытательные и технологические стенды</h3>
-                                <div class="block-header__icon">
-                                    <!-- выводить, если есть темная иконка  -->
-                                    <div class="block-header__icon-black">
-                                        <img src="./images/block-icon-3-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                    <!-- выводить, если есть светлая иконка  -->
-                                    <div class="block-header__icon-white">
-                                        <img src="./images/block-icon-3-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-body">
-                                <div class="block-body__text">
-                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
-                                </div>
-                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
-                            </div>
-                        </div>
-                        <!--   классы block-bg-1, block-bg-2, block-bg-3 отвечают за цвет фона блока  -->
-                        <div class="block block-bg-2 block-mobile-order-2">
-                            <div class="block-header">
-                                <h3 class="block-header__title title-3">Судопогрузочные машины</h3>
-                                <div class="block-header__icon">
-                                    <!-- выводить, если есть темная иконка  -->
-                                    <div class="block-header__icon-black">
-                                        <img src="./images/block-icon-4-black.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                    <!-- выводить, если есть светлая иконка  -->
-                                    <div class="block-header__icon-white">
-                                        <img src="./images/block-icon-4-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-body">
-                                <div class="block-body__text">
-                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
-                                </div>
-                                <a href="" class="link block-body__link"><span>Подробнее</span><i></i></a>
-                            </div>
-                        </div>
-                        <!--   классы block-bg-1, block-bg-2, block-bg-3 отвечают за цвет фона блока  -->
-                        <div class="block block-bg-3 block-mobile-order-5">
-                            <div class="block-header">
-                                <h3 class="block-header__title title-3">Каталог<br />продукции</h3>
-                                <div class="block-header__icon">
-                                    <!-- выводить, если есть светлая иконка  -->
-                                    <div class="block-header__icon-white">
-                                        <img src="./images/block-icon-5-white.svg" alt="Иконка" width="68" height="68" loading="lazy" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-body">
-                                <div class="block-body__text">
-                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
-                                </div>
-                                <a href="" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Наша работа впечатляет -->
-            <section class="section">
-                <div class="container">
-                    <div class="title-container title-column">
-                        <p class="subtitle">реализованные проекты</p>
-                        <div class="title-row">
-                            <h2 class="title-2"><strong>Наша работа</strong> впечатляет</h2>
-                            <div class="slider-buttons">
-                                <button class="slider-button slider-button--prev" aria-label="Предыдущий слайд"></button>
-                                <button class="slider-button slider-button--next" aria-label="Следующий слайд"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper slider slider-3 slider-visible">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="product-item.html" class="product-slide">
-                                    <div class="product-slide__image">
-                                        <!-- основное изображение  -->
-                                        <div class="product-slide__image-front">
-                                            <img src="./images/product-slide-1.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <!-- изображение при наведении  -->
-                                        <div class="product-slide__image-back">
-                                            <img src="./images/product-slide-2.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
-                                    </div>
-                                    <div class="product-slide__info">
-                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
-                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
-                                    </div>
-                                    <ul class="product-slide__info-tags">
-                                        <li><p>Козловой кран</p></li>
-                                        <li><p>Металлургия</p></li>
-                                        <li><address>Санкт-Петербург</address></li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product-item.html" class="product-slide">
-                                    <div class="product-slide__image">
-                                        <!-- основное изображение  -->
-                                        <div class="product-slide__image-front">
-                                            <img src="./images/product-slide-2.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <!-- изображение при наведении  -->
-                                        <div class="product-slide__image-back">
-                                            <img src="./images/product-slide-3.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
-                                    </div>
-                                    <div class="product-slide__info">
-                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
-                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
-                                    </div>
-                                    <ul class="product-slide__info-tags">
-                                        <li><p>Козловой кран</p></li>
-                                        <li><p>Металлургия</p></li>
-                                        <li><address>Санкт-Петербург</address></li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product-item.html" class="product-slide">
-                                    <div class="product-slide__image">
-                                        <!-- основное изображение  -->
-                                        <div class="product-slide__image-front">
-                                            <img src="./images/product-slide-3.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <!-- изображение при наведении  -->
-                                        <div class="product-slide__image-back">
-                                            <img src="./images/product-slide-4.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
-                                    </div>
-                                    <div class="product-slide__info">
-                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
-                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
-                                    </div>
-                                    <ul class="product-slide__info-tags">
-                                        <li><p>Козловой кран</p></li>
-                                        <li><p>Металлургия</p></li>
-                                        <li><address>Санкт-Петербург</address></li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product-item.html" class="product-slide">
-                                    <div class="product-slide__image">
-                                        <!-- основное изображение  -->
-                                        <div class="product-slide__image-front">
-                                            <img src="./images/product-slide-4.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <!-- изображение при наведении  -->
-                                        <div class="product-slide__image-back">
-                                            <img src="./images/product-slide-5.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
-                                    </div>
-                                    <div class="product-slide__info">
-                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
-                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
-                                    </div>
-                                    <ul class="product-slide__info-tags">
-                                        <li><p>Козловой кран</p></li>
-                                        <li><p>Металлургия</p></li>
-                                        <li><address>Санкт-Петербург</address></li>
-                                    </ul>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="product-item.html" class="product-slide">
-                                    <div class="product-slide__image">
-                                        <!-- основное изображение  -->
-                                        <div class="product-slide__image-front">
-                                            <img src="./images/product-slide-5.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <!-- изображение при наведении  -->
-                                        <div class="product-slide__image-back">
-                                            <img src="./images/product-slide-1.webp" alt="Наименование проекта в одну строку (если надо в две)" width="507" height="292" loading="lazy" />
-                                        </div>
-                                        <p class="product-slide__plask"><span>Узнать подробнее</span><i></i></p>
-                                    </div>
-                                    <div class="product-slide__info">
-                                        <h3 class="title-4 product-slide__info-title">Наименование проекта в одну строку (если надо в две)</h3>
-                                        <p>Поставка и ввод в эксплуатацию козлового крана грузоподъемностью 560 тонн</p>
-                                    </div>
-                                    <ul class="product-slide__info-tags">
-                                        <li><p>Козловой кран</p></li>
-                                        <li><p>Металлургия</p></li>
-                                        <li><address>Санкт-Петербург</address></li>
-                                    </ul>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Создаем инженерные решения, которые двигают промышленность -->
-            <section class="section section-background" data-lazy-desktop="./images/section-background-1-desktop.webp" data-lazy-mobile="./images/section-background-1-mobile.webp">
-                <div class="container">
-                    <div class="content-small">
-                        <div class="title-container title-column">
-                            <p class="subtitle">о компании</p>
-                            <h2 class="title-2">Создаем инженерные решения, которые <strong>двигают промышленность</strong></h2>
-                        </div>
-                        <div class="content-text">
-                            <strong>
-                                <p>Проектируем и производим уникальное грузоподъемное и перегрузочное оборудование для предприятий тяжелой промышленности, портовой инфраструктуры и судостроения.</p>
-                            </strong>
-                            <p>От идеи и проектирования до изготовления, монтажа и ввода в эксплуатацию — сопровождаем каждый проект на всех этапах. Более чем за годы работы реализовали десятки сложных инженерных решений, доказав надежность оборудования в самых требовательных условиях эксплуатации.</p>
-                            <a href="about.html" class="base-button blue-button content-text__link"><span>Узнать больше о компании</span><i></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Нас выбирают лидеры отрасли -->
-            <section class="section">
-                <div class="container">
-                    <div class="title-container title-column">
-                        <p class="subtitle">пресс-центр</p>
-                        <div class="title-row">
-                            <h2 class="title-2">Упоминания в <strong>СМИ</strong></h2>
-                            <div class="slider-buttons">
-                                <button class="slider-button slider-button--prev" aria-label="Предыдущий слайд"></button>
-                                <button class="slider-button slider-button--next" aria-label="Следующий слайд"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper slider slider-4 slider-visible news-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="news-slide">
-                                    <div class="news-slide__image">
-                                        <img src="./images/news-slide-1.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="375" />
-                                    </div>
-                                    <div class="news-slide__content">
-                                        <div class="news-slide__content-body">
-                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
-                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
-                                        </div>
-                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="news-slide">
-                                    <div class="news-slide__image">
-                                        <img src="./images/news-slide-2.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="280" />
-                                    </div>
-                                    <div class="news-slide__content">
-                                        <div class="news-slide__content-body">
-                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
-                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
-                                        </div>
-                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="news-slide">
-                                    <div class="news-slide__image">
-                                        <img src="./images/news-slide-3.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="460" />
-                                    </div>
-                                    <div class="news-slide__content">
-                                        <div class="news-slide__content-body">
-                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
-                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
-                                        </div>
-                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="news-slide">
-                                    <div class="news-slide__image">
-                                        <img src="./images/news-slide-1.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="375" />
-                                    </div>
-                                    <div class="news-slide__content">
-                                        <div class="news-slide__content-body">
-                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
-                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
-                                        </div>
-                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="news-slide">
-                                    <div class="news-slide__image">
-                                        <img src="./images/news-slide-2.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="280" />
-                                    </div>
-                                    <div class="news-slide__content">
-                                        <div class="news-slide__content-body">
-                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
-                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
-                                        </div>
-                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="news-slide">
-                                    <div class="news-slide__image">
-                                        <img src="./images/news-slide-3.webp" alt="Наименование новости, статьи в одну или несколько строк" width="375" height="460" />
-                                    </div>
-                                    <div class="news-slide__content">
-                                        <div class="news-slide__content-body">
-                                            <a href="news-item.html" class="news-slide__content-title"><h3 class="title-4">Наименование новости, статьи в одну или несколько строк</h3></a>
-                                            <p>Краткое описание, тезисы из новсти в две и более строки</p>
-                                        </div>
-                                        <time datetime="2022-06-12" class="news-slide__content-date">12 июня 2026</time>
-                                    </div>
-                                </div>
+                                <ul class="documents-list">
+                                    <li>
+                                        <a href="#!" download="" class="document">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" loading="lazy" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Кратцер-кран (реклаймер скребковый)</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" loading="lazy" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Реклаймер роторный мостовой</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" loading="lazy" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Стакер-реклаймер стреловой роторный</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="documents-collateral.html" class="base-button blue-button tab-content__link"><span>Смотреть все презентации и буклеты</span><i></i></a>
                             </div>
                         </div>
                     </div>
@@ -511,17 +479,6 @@
             <section class="section">
                 <div class="container">
                     <div class="blocks blocks-col-2">
-                        <div class="block block-bg-3 block-lg" data-lazy-desktop="./images/block-lg-1-desktop.webp" data-lazy-mobile="./images/block-lg-1-mobile.webp">
-                            <div class="block-header">
-                                <h3 class="block-header__title title-3">Наша продукция</h3>
-                            </div>
-                            <div class="block-body">
-                                <div class="block-body__text">
-                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
-                                </div>
-                                <a href="products.html" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
-                            </div>
-                        </div>
                         <div class="block block-bg-1 block-lg" data-lazy-desktop="./images/block-lg-2-desktop.webp" data-lazy-mobile="./images/block-lg-2-mobile.webp">
                             <div class="block-header">
                                 <h3 class="block-header__title title-3">Дистрибуция</h3>
@@ -531,6 +488,17 @@
                                     <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
                                 </div>
                                 <a href="distribution.html" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-3 block-lg" data-lazy-desktop="./images/block-lg-1-desktop.webp" data-lazy-mobile="./images/block-lg-1-mobile.webp">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">О компании</h3>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="about.html" class="link block-body__link"><span>Подробнее</span><i></i></a>
                             </div>
                         </div>
                     </div>
@@ -774,7 +742,9 @@
                 </div>
             </div>
         </footer>
+
         <script src="./js/choices.min.js"></script>
+        <script src="./js/glightbox.min.js"></script>
         <script src="./js/swiper-bundle.min.js"></script>
         <script src="./js/index.js"></script>
     </body>
