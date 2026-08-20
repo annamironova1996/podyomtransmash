@@ -226,7 +226,7 @@ $fluid-max-width: 1561px !default;
             .certificate-content__title {
                 color: var(--base-white);
             }
-            .certificate-content__text {
+            .certificate-content__list {
                 color: var(--opacity-white-70);
             }
         }
@@ -273,6 +273,15 @@ $fluid-max-width: 1561px !default;
             &.pagination-link--next {
                 &:before {
                     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.8667 10.9999L12.6087 5.63589L14.2586 4.22168L23.3332 11.9999L14.2586 19.778L12.6087 18.3638L18.8667 12.9999H4.6665V10.9999H18.8667Z' fill='%230060A4' /%3e%3c/svg%3e");
+                }
+            }
+        }
+    }
+    .option-dropdown {
+        &:has(input:checked) {
+            .option-dropdown__button {
+                &:hover {
+                    background-color: var(--opacity-accent);
                 }
             }
         }
@@ -687,6 +696,12 @@ h4,
     p + p {
         padding-top: 11.5px;
     }
+}
+.content-page {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(20px, 30px);
+    margin-bottom: fluid(30px, 60px);
 }
 
 .grid-2 {
@@ -1874,6 +1889,11 @@ h4,
         .option-dropdown__button {
             background-color: var(--accent);
             color: var(--base-white);
+            pointer-events: visible;
+
+            &:active {
+                background-color: var(--accent);
+            }
         }
     }
 }
@@ -1957,6 +1977,7 @@ h4,
     width: 100%;
     background-color: var(--background-5);
     color: var(--disabled-gray);
+    pointer-events: none;
 }
 
 // select-list
@@ -2296,8 +2317,14 @@ h4,
     .block-slide {
         max-width: fluid(280px, 770px);
         min-height: fluid(168px, 276px);
+        gap: fluid(14px, 20px);
+        
+        .block-body__text {
+            -webkit-line-clamp: 5;
+        }
+    }
+    .text-hidden {
         gap: inherit;
-
         .block-body__text {
             display: none;
         }
