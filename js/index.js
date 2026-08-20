@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.querySelector('body');
     const html = document.querySelector('html');
 
-    // Кастомный селект
+    // // Кастомный селект
     const selectElements = document.querySelectorAll('[data-select]');
 
     selectElements.forEach((selectElement) => {
@@ -28,6 +28,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (url && url !== '#!') {
                     window.location.href = url;
                 }
+            });
+        }
+
+        // Кастомный селект для выбора кол-ва товаров на странице
+        if (selectElement.closest('.show-select')) {
+            new Choices(selectElement, {
+                searchEnabled: false,
+                itemSelectText: '',
+                placeholder: false,
+                placeholderValue: '',
+                shouldSort: false,
+                position: 'auto',
             });
         }
     });
@@ -121,6 +133,29 @@ document.addEventListener('DOMContentLoaded', function () {
             contactBlock.classList.remove('active');
         }
     }
+
+    // Слайдер (slider-auto)
+    const sliderAuto = document.querySelectorAll('.slider-auto');
+
+    sliderAuto.forEach((slider) => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 'auto',
+            spaceBetween: 9,
+
+            breakpoints: {
+                1590: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 11,
+                },
+            },
+        });
+
+        swiper.on('click', function () {
+            if (!swiper.clickedSlide) return;
+
+            swiper.slideTo(swiper.clickedIndex, 300);
+        });
+    });
 
     // Слайдер (2)
     const slider2 = document.querySelectorAll('.slider-2');
@@ -342,6 +377,165 @@ document.addEventListener('DOMContentLoaded', function () {
                     activateTab(tabId);
                 });
             });
+        });
+    }
+
+    // Открытие / закрытие dropdown
+    const optionSelect = document.querySelectorAll('.option-select');
+    const selectList = document.querySelector('.select-list');
+
+    if (optionSelect && selectList) {
+        optionSelect.forEach((option) => {
+            option.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                const parent = this.closest('.option');
+
+                if (!parent) return;
+
+                const optionDropdown = parent.querySelector('.option-dropdown');
+
+                if (!optionDropdown) return;
+
+                document.querySelectorAll('.option-dropdown.active').forEach((dropdown) => {
+                    if (dropdown !== optionDropdown) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+
+                optionDropdown.classList.toggle('active');
+
+                if (optionDropdown.classList.contains('active')) {
+                    const dropdownBody = optionDropdown.querySelector('.option-dropdown__body');
+
+                    if (dropdownBody && !dropdownBody.dataset.simplebarInitialized) {
+                        new SimpleBar(dropdownBody, {
+                            autoHide: true,
+                            forceVisible: 'y',
+                        });
+
+                        dropdownBody.dataset.simplebarInitialized = 'true';
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll('.option').forEach((option, optionIndex) => {
+            const dropdown = option.querySelector('.option-dropdown');
+            const optionTitle = option.querySelector('.option-select span');
+            const applyButton = option.querySelector('.option-dropdown__button');
+
+            if (!dropdown || !optionTitle || !applyButton || !selectList) {
+                return;
+            }
+
+            const groupId = `option-${optionIndex}`;
+
+            applyButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const checkedCheckboxes = dropdown.querySelectorAll('input[type="checkbox"]:checked');
+
+                let selectItem = selectList.querySelector(`.select-item[data-group="${groupId}"]`);
+
+                if (checkedCheckboxes.length === 0) {
+                    if (selectItem) {
+                        selectItem.remove();
+                    }
+
+                    dropdown.classList.remove('active');
+
+                    return;
+                }
+
+                if (!selectItem) {
+                    selectItem = document.createElement('div');
+
+                    selectItem.classList.add('select-item');
+
+                    selectItem.dataset.group = groupId;
+
+                    selectItem.innerHTML = `
+                <span class="select-item__title">
+                    ${optionTitle.textContent.trim()}
+                </span>
+
+                <ul class="select-item__list"></ul>
+            `;
+
+                    selectList.appendChild(selectItem);
+                }
+
+                const itemList = selectItem.querySelector('.select-item__list');
+
+                itemList.innerHTML = '';
+
+                checkedCheckboxes.forEach((checkbox) => {
+                    const label = dropdown.querySelector(`label[for="${checkbox.id}"]`);
+
+                    if (!label) return;
+
+                    const li = document.createElement('li');
+
+                    li.dataset.id = checkbox.id;
+
+                    li.innerHTML = `
+                <span class="select-item__text">
+                    ${label.textContent.trim()}
+                </span>
+
+                <button
+                    type="button"
+                    class="select-item__remove"
+                    aria-label="Удалить"
+                ></button>
+            `;
+
+                    itemList.appendChild(li);
+                });
+
+                dropdown.classList.remove('active');
+            });
+        });
+
+        selectList.addEventListener('click', function (e) {
+            const removeButton = e.target.closest('.select-item__remove');
+
+            if (!removeButton) return;
+
+            e.stopPropagation();
+
+            const li = removeButton.closest('li');
+
+            if (!li) return;
+
+            const checkboxId = li.dataset.id;
+
+            const checkbox = document.getElementById(checkboxId);
+
+            if (checkbox) {
+                checkbox.checked = false;
+            }
+
+            const selectItem = li.closest('.select-item');
+
+            li.remove();
+
+            if (selectItem && selectItem.querySelectorAll('.select-item__list li').length === 0) {
+                selectItem.remove();
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            const isInsideSelect = e.target.closest('.option-select');
+            const isInsideDropdown = e.target.closest('.option-dropdown');
+
+            if (!isInsideSelect && !isInsideDropdown) {
+                document.querySelectorAll('.option-dropdown.active').forEach((dropdown) => {
+                    dropdown.classList.remove('active');
+                });
+            }
         });
     }
 

@@ -10,12 +10,13 @@
     --background-2: #e6edf3;
     --background-3: #f7f7f7;
     --background-4: #f5fafe;
+    --background-5: #efefef;
     --base-white: #fff;
     --base-black: #000;
     --base-red: #f50000;
     --opacity-accent: rgba(0, 96, 164, 0.8);
     --opacity-white-80: rgba(255, 255, 255, 0.8);
-    --opacity-white-70: rgba(255, 255, 255, 0.8);
+    --opacity-white-70: rgba(255, 255, 255, 0.7);
     --opacity-white-20: rgba(255, 255, 255, 0.2);
     --opacity-primary-80: rgb(23, 38, 48, 0.8);
     --opacity-primary-70: rgb(23, 38, 48, 0.7);
@@ -24,4 +25,7 @@
     --opacity-primary-40: rgb(23, 38, 48, 0.4);
     --border-color: rgba(23, 38, 48, 0.15);
     --modal-bg: rgba(52, 52, 52, 0.2);
+    --border-dropdown: #e2e8f0;
+    --border-checkbox: #999;
+    --disabled-gray: #c4c4c4;
 }
