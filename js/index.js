@@ -134,6 +134,141 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Слайдер (slider-images)
+    const sliderImages = document.querySelectorAll('.slider-images');
+    if (sliderImages) {
+        sliderImages.forEach((slider) => {
+            const parent = slider.closest('.product-item__images');
+
+            let prevEl = null;
+            let nextEl = null;
+
+            if (parent) {
+                prevEl = parent.querySelector('.slider-button--prev');
+                nextEl = parent.querySelector('.slider-button--next');
+            }
+
+            const swiper = new Swiper(slider, {
+                slidesPerView: 'auto',
+                spaceBetween: 14,
+
+                breakpoints: {
+                    1281: {
+                        slidesPerView: 4,
+                        spaceBetween: 18,
+                    },
+                },
+
+                navigation: {
+                    nextEl: nextEl,
+                    prevEl: prevEl,
+                },
+            });
+
+            swiper.on('click', function () {
+                const clickedSlide = swiper.clickedSlide;
+
+                if (!clickedSlide) return;
+
+                const slideButton = clickedSlide.querySelector('.product-item__slide');
+
+                if (!slideButton) return;
+
+                if (window.innerWidth > 1280) {
+                    if (!parent) return;
+
+                    const mainImage = parent.querySelector('.product-item__image');
+
+                    if (!mainImage) return;
+
+                    const openVideoButton = mainImage.querySelector('.product-item__open-video');
+
+                    if (!openVideoButton) return;
+
+                    const oldVideo = mainImage.querySelector('video');
+
+                    if (oldVideo) {
+                        oldVideo.pause();
+                        oldVideo.currentTime = 0;
+                    }
+
+                    mainImage.querySelectorAll('img, video').forEach((element) => {
+                        element.remove();
+                    });
+
+                    const slideVideo = slideButton.querySelector('video');
+
+                    if (slideVideo) {
+                        const videoClone = slideVideo.cloneNode(true);
+
+                        videoClone.classList.remove('active');
+
+                        mainImage.insertBefore(videoClone, openVideoButton);
+                    }
+
+                    const slideImage = slideButton.querySelector('img');
+
+                    if (slideImage) {
+                        const imageClone = slideImage.cloneNode(true);
+
+                        imageClone.style.display = '';
+
+                        mainImage.insertBefore(imageClone, openVideoButton);
+                    }
+
+                    swiper.slideTo(swiper.clickedIndex, 300);
+                } else {
+                    const video = slideButton.querySelector('video');
+                    const image = slideButton.querySelector('img');
+
+                    if (!video) return;
+
+                    if (image) {
+                        image.style.display = 'none';
+                    }
+
+                    video.classList.add('active');
+
+                    video.play().catch(() => {
+                        console.log('Видео не удалось запустить');
+                    });
+                }
+            });
+
+            if (parent) {
+                const openVideoButton = parent.querySelector('.product-item__open-video');
+
+                if (openVideoButton) {
+                    openVideoButton.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        if (window.innerWidth <= 1280) return;
+
+                        const mainImage = this.closest('.product-item__image');
+
+                        if (!mainImage) return;
+
+                        const image = mainImage.querySelector('img');
+                        const video = mainImage.querySelector('video');
+
+                        if (!video) return;
+
+                        if (image) {
+                            image.style.display = 'none';
+                        }
+
+                        video.classList.add('active');
+
+                        video.play().catch(() => {
+                            console.log('Видео не удалось запустить');
+                        });
+                    });
+                }
+            }
+        });
+    }
+
     // Слайдер (slider-auto)
     const sliderAuto = document.querySelectorAll('.slider-auto');
 
@@ -255,6 +390,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Слайдер (slider-more)
+    const sliderMore = document.querySelectorAll('.slider-more');
+    if (sliderMore) {
+        sliderMore.forEach((slider) => {
+            const parent = slider.closest('.section');
+            const prevEl = parent.querySelector('.slider-button--prev');
+            const nextEl = parent.querySelector('.slider-button--next');
+
+            const swiper = new Swiper(slider, {
+                slidesPerView: 'auto',
+                spaceBetween: 14,
+                breakpoints: {
+                    1590: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    769: {
+                        spaceBetween: 14,
+                        slidesPerView: 'auto',
+                    },
+                },
+                navigation: {
+                    nextEl: nextEl,
+                    prevEl: prevEl,
+                },
+            });
+        });
+    }
+
     // Прикрепление файлов
     const fileInputs = document.querySelectorAll('.form-file input[type="file"]');
 
@@ -339,37 +503,42 @@ document.addEventListener('DOMContentLoaded', function () {
     // Табы
     const tabsContainers = document.querySelectorAll('[data-tabs]');
 
-    if (tabsContainers) {
+    if (tabsContainers.length) {
         tabsContainers.forEach((container, index) => {
             const tabButtons = container.querySelectorAll('.tabs-item');
             const tabContents = container.querySelectorAll('.tab-content');
-            const storageKey = `activeTab_${index}`;
+
+            const mobileTab = 'tab-description';
+            const desktopTab = 'tab-characteristic';
+            const breakpoint = 1280;
 
             function activateTab(tabId) {
-                tabButtons.forEach((btn) => btn.classList.remove('active'));
-                tabContents.forEach((content) => content.classList.remove('active'));
+                tabButtons.forEach((btn) => {
+                    btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+                });
 
-                const activeButton = container.querySelector(`[data-tab="${tabId}"]`);
-                if (activeButton) activeButton.classList.add('active');
-
-                const activeContent = container.querySelector(`[data-tab-content="${tabId}"]`);
-                if (activeContent) activeContent.classList.add('active');
-
-                try {
-                    localStorage.setItem(storageKey, tabId);
-                } catch (e) {}
+                tabContents.forEach((content) => {
+                    content.classList.toggle('active', content.getAttribute('data-tab-content') === tabId);
+                });
             }
 
-            const savedTab = localStorage.getItem(storageKey);
-            const defaultTab = container.querySelector('.tabs-item.active');
+            function setResponsiveTab() {
+                const isMobile = window.innerWidth <= breakpoint;
 
-            if (savedTab && container.querySelector(`[data-tab="${savedTab}"]`)) {
-                activateTab(savedTab);
-            } else if (defaultTab) {
-                activateTab(defaultTab.getAttribute('data-tab'));
-            } else if (tabButtons.length > 0) {
-                activateTab(tabButtons[0].getAttribute('data-tab'));
+                if (isMobile) {
+                    if (container.querySelector(`[data-tab="${mobileTab}"]`)) {
+                        activateTab(mobileTab);
+                    }
+                } else {
+                    if (container.querySelector(`[data-tab="${desktopTab}"]`)) {
+                        activateTab(desktopTab);
+                    }
+                }
             }
+
+            setResponsiveTab();
+
+            window.addEventListener('resize', setResponsiveTab);
 
             tabButtons.forEach((button) => {
                 button.addEventListener('click', function () {
