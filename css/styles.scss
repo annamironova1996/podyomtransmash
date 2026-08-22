@@ -684,6 +684,12 @@ h5,
 }
 .slider-tabs {
     margin-top: fluid(20px, 60px);
+
+    .swiper-slide {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
 }
 
 .content-small {
@@ -1710,6 +1716,11 @@ h5,
 .documents-collateral {
     gap: 20px;
 }
+.documents-legals {
+    display: grid;
+    grid-template-columns: auto fluid(328px, 638px);
+    gap: fluid(24px, 20px);
+}
 .documents-list {
     display: flex;
     flex-direction: column;
@@ -1722,6 +1733,7 @@ h5,
 }
 .documents-block__title {
     margin-bottom: fluid(20px, 30px);
+    letter-spacing: -0.02rem;
 }
 .document {
     border-radius: fluid(6px, 10px);
@@ -2547,6 +2559,45 @@ h5,
     min-width: 0px;
 }
 
+// legals
+.legals {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(16px, 20px);
+}
+.legals-block {
+    padding: fluid(19px, 31px);
+    border: 1px solid var(--background-2);
+    border-radius: 10px;
+}
+.legals-block__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 400;
+    margin-top: fluid(20px, 30px);
+
+    span {
+        font-weight: 300;
+        font-size: fluid(13px, 14px);
+        line-height: 143%;
+        color: var(--opacity-primary-50);
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(8px, 10px);
+    }
+}
+.legals-link {
+    width: 100%;
+    max-width: 100%;
+}
+.legals-block__title {
+    letter-spacing: -0.01rem;
+}
+
 @media screen and (max-width: 1590px) {
     .slider-more {
         overflow: visible;
@@ -2678,6 +2729,10 @@ h5,
         &.slider-images--mobile {
             display: block;
         }
+    }
+
+    .documents-legals {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2962,5 +3017,11 @@ h5,
 
     .documents-block__title {
         letter-spacing: -0.01rem;
+    }
+
+    .legals-block__list {
+        span {
+            line-height: 138%;
+        }
     }
 }

@@ -296,9 +296,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliderTabs = document.querySelectorAll('.slider-tabs');
 
     sliderTabs.forEach((slider) => {
+        const activeSlide = slider.querySelector('.swiper-slide .tabs-item.active');
+
+        let initialSlide = 0;
+
+        if (activeSlide) {
+            initialSlide = Array.from(slider.querySelectorAll('.swiper-slide')).indexOf(activeSlide.closest('.swiper-slide'));
+        }
+
         const swiper = new Swiper(slider, {
             slidesPerView: 'auto',
-            spaceBetween: 8,
+            initialSlide: initialSlide,
 
             breakpoints: {
                 1590: {
