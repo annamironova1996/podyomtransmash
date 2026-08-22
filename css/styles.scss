@@ -775,6 +775,10 @@ h5,
     h5 {
         margin-bottom: 14px;
     }
+
+    b {
+        font-weight: 400;
+    }
 }
 .content-page {
     display: flex;
@@ -1709,6 +1713,11 @@ h5,
 .documents {
     margin-top: fluid(24px, 50px);
 }
+.documents-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(19px, 20px);
+}
 .documents-credentials {
     column-gap: fluid(14px, 20px);
     row-gap: fluid(14px, 40px);
@@ -1720,6 +1729,12 @@ h5,
     display: grid;
     grid-template-columns: auto fluid(328px, 638px);
     gap: fluid(24px, 20px);
+}
+.documents-questionnaires {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(19px, 20px);
+    max-width: 1297px;
 }
 .documents-list {
     display: flex;
@@ -2732,6 +2747,9 @@ h5,
     }
 
     .documents-legals {
+        grid-template-columns: 1fr;
+    }
+    .documents-grid-2 {
         grid-template-columns: 1fr;
     }
 }

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Опросные листы</title>
+        <link rel="stylesheet" href="./css/fonts.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/variables.css" />
+        <link rel="stylesheet" href="./css/choices.min.css" />
+        <link rel="stylesheet" href="./css/swiper-bundle.css" />
+        <link rel="stylesheet" href="./css/glightbox.min.css" />
+        <link rel="stylesheet" href="./css/simplebar.min.css" />
+        <link rel="stylesheet" href="./css/template_styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-main">
+                    <a href="index.html" class="header-logo">
+                        <img src="./images/logo.svg" alt="Логотип" width="246" height="48" />
+                    </a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="products.html">Продукция</a>
+                                <ul>
+                                    <li><a href="category-product.html">Мостовые специальные краны</a></li>
+                                    <li><a href="category-product.html">Козловые специальные краны</a></li>
+                                    <li><a href="category-product.html">Судопогрузочные машины</a></li>
+                                    <li><a href="category-product.html">Портальные краны</a></li>
+                                    <li><a href="category-product.html">Вагоноопрокидыватели</a></li>
+                                    <li><a href="category-product.html">Нестандартное оборудование</a></li>
+                                    <li><a href="category-product.html">Реклаймеры</a></li>
+                                    <li><a href="category-product.html">Модернизация и реконструкция ПТО</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="distribution.html">Дистрибуция</a>
+                                <ul>
+                                    <li><a href="category-distribution.html">Мостовые специальные краны</a></li>
+                                    <li><a href="category-distribution.html">Козловые специальные краны</a></li>
+                                    <li><a href="category-distribution.html">Оборудование для судостроения и судоремонта</a></li>
+                                    <li><a href="category-distribution.html">Портальные краны</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="news.html">Новости и статьи</a></li>
+                            <li><a href="questionnaires.html">Опросные листы</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-additional">
+                        <div class="header-contacts">
+                            <button type="button" class="header-contacts__open-btn" aria-label="Открыть контакты">Связаться с нами</button>
+                            <ul class="header-contacts__list">
+                                <li><a href="tel:+7 (812) 708-08-78">+7 (812) 708-08-78</a></li>
+                                <li><a href="mailto:info@pdtm.ru">info@pdtm.ru</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-lang custom-select">
+                            <select data-select>
+                                <option value="ru" data-url="#!" selected>RU</option>
+                                <option value="en" data-url="#!">EN</option>
+                                <option value="de" data-url="#!">DE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="header-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="header-mobile" hidden aria-label="Мобильное меню">
+                    <div class="header-mobile__wrapper">
+                        <nav class="header-mobile__menu hidden-scroll">
+                            <ul>
+                                <li>
+                                    <a href="products.html">Продукция</a>
+                                    <button type="button" class="header-mobile__open-btn" aria-label="Открыть подменю каталога">
+                                        <span class="visually-hidden">Открыть подменю</span>
+                                    </button>
+                                    <ul>
+                                        <li><a href="category-product.html">Мостовые специальные краны</a></li>
+                                        <li><a href="category-product.html">Козловые специальные краны</a></li>
+                                        <li><a href="category-product.html">Судопогрузочные машины</a></li>
+                                        <li><a href="category-product.html">Портальные краны</a></li>
+                                        <li><a href="category-product.html">Вагоноопрокидыватели</a></li>
+                                        <li><a href="category-product.html">Нестандартное оборудование</a></li>
+                                        <li><a href="category-product.html">Реклаймеры</a></li>
+                                        <li><a href="category-product.html">Модернизация и реконструкция ПТО</a></li>
+                                        <li><a href="products.html">Вся продукция</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="distribution.html">Дистрибуция</a>
+                                    <button type="button" class="header-mobile__open-btn" aria-label="Открыть подменю каталога">
+                                        <span class="visually-hidden">Открыть подменю</span>
+                                    </button>
+                                    <ul>
+                                        <li><a href="category-distribution.html">Мостовые специальные краны</a></li>
+                                        <li><a href="category-distribution.html">Козловые специальные краны</a></li>
+                                        <li><a href="category-distribution.html">Оборудование для судостроения и судоремонта</a></li>
+                                        <li><a href="category-distribution.html">Портальные краны</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">О компании</a></li>
+                                <li><a href="news.html">Новости и статьи</a></li>
+                                <li><a href="questionnaires.html">Опросные листы</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header-mobile__bottom">
+                            <a href="" download class="base-button blue-button header-mobile__download"><span>Скачать карту партнера</span><i></i></a>
+                            <div class="header-lang mobile-lang custom-select">
+                                <select data-select>
+                                    <option value="ru" data-url="#!" selected>RU</option>
+                                    <option value="en" data-url="#!">EN</option>
+                                    <option value="de" data-url="#!">DE</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <!-- Хлебные крошки  -->
+            <section class="breadcrumbs">
+                <div class="container">
+                    <nav class="breadcrumbs-nav" aria-label="Хлебные крошки">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="./index.html">Главная</a></li>
+                            <li><span>Опросные листы</span></li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="breadcrumbs-back" onclick="history.back()">Назад</button>
+                </div>
+            </section>
+
+            <!-- Опросные листы -->
+            <section class="section">
+                <div class="container">
+                    <div class="content-large content-page">
+                        <h1 class="title-1">Опросные листы</h1>
+                        <div class="content">
+                            <p>Опросный лист – отличный способ начать предметный диалог и максимально точно рассказать о том, какая продукция необходима и ваших требованиях к ней. Вы можете скачать опросные листы и отправить их на наш емейл или приложить его к форме обратной связи, расположенной ниже.</p>
+                            <p><b>Наши специалисты обрабатывают входящие заявки в течение 24 часов.</b></p>
+                        </div>
+                    </div>
+                    <div class="documents documents-questionnaires">
+                        <div class="documents-block">
+                            <h2 class="title-3 documents-block__title">Судопогрузочные машины</h2>
+                            <ul class="documents-list">
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Машина судопогрузочная ПЕЧОРА с выдвижной стрелой</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Машина судопогрузочная КУБАНЬ с подъемной стрелой на поворотной площадке</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Машина судопогрузочная НЕВА с подъемной стрелой и челноком на конвейере</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="documents-grid-2">
+                            <div class="documents-block">
+                                <h2 class="title-3 documents-block__title">Мостовые краны</h2>
+                                <ul class="documents-list">
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Краны мостовые однобалочные (кран-балки)</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Кран мостовой металлургический</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Кран мостовой специальный</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Кран мостовой специальный шахтный</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="documents-block">
+                                <h2 class="title-3 documents-block__title">Реклаймеры</h2>
+                                <ul class="documents-list">
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Кратцер-кран (реклаймер скребковый)</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Реклаймер роторный мостовой</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" download="" class="document document-white">
+                                            <div class="document-icon">
+                                                <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                            </div>
+                                            <div class="document-content">
+                                                <h3 class="document-content__title">Стакер-реклаймер стреловой роторный</h3>
+                                                <span class="document-content__size">5 мб</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="documents-block">
+                            <h2 class="title-3 documents-block__title">Прочее</h2>
+                            <ul class="documents-list">
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Краны козловые и полукозловые</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Краны портальные</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Система транспортирования судов (СТС)</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Контейнерные краны</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Стреловой кран</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" download="" class="document document-white">
+                                        <div class="document-icon">
+                                            <img src="./images/document.svg" alt="Иконка документа" width="46" height="46" />
+                                        </div>
+                                        <div class="document-content">
+                                            <h3 class="document-content__title">Кабина для подъема и транспортирования людей</h3>
+                                            <span class="document-content__size">5 мб</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="blocks blocks-col-3 blocks-col-gap">
+                        <div class="block block-bg-1 block-lg" data-lazy-desktop="./images/block-lg-2-desktop.webp" data-lazy-mobile="./images/block-lg-2-mobile.webp">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Наша продукция</h3>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="products.html" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-2 block-lg" data-lazy-desktop="./images/block-lg-3-desktop.webp" data-lazy-mobile="./images/block-lg-3-mobile.webp">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">Дистрибуция</h3>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="distribution.html" class="link block-body__link"><span>Перейти в каталог</span><i></i></a>
+                            </div>
+                        </div>
+                        <div class="block block-bg-3 block-lg" data-lazy-desktop="./images/block-lg-1-desktop.webp" data-lazy-mobile="./images/block-lg-1-mobile.webp">
+                            <div class="block-header">
+                                <h3 class="block-header__title title-3">О компании</h3>
+                            </div>
+                            <div class="block-body">
+                                <div class="block-body__text">
+                                    <p>Короткое описание продуктовой категории, которое нужно чтобы увести целевую аудиторию сразу на нужную страницу продуктового каталога</p>
+                                </div>
+                                <a href="about.html" class="link block-body__link"><span>Подробнее</span><i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Наши контакты -->
+            <section class="section" id="contacts">
+                <div class="container">
+                    <div class="grid-2">
+                        <div class="contacts">
+                            <div class="title-column contacts-title">
+                                <p class="subtitle">мы на связи</p>
+                                <h2 class="title-2">Наши <strong>контакты</strong></h2>
+                            </div>
+                            <ul class="contacts-info">
+                                <li>
+                                    <p>адрес</p>
+                                    <address>192029, Россия, Санкт-Петербург, Большой Смоленский проспект, д.2</address>
+                                </li>
+                                <li>
+                                    <p>телефон для связи</p>
+                                    <a href="tel:+7 (812) 708-88-78">+7 (812) 708-88-78</a>
+                                </li>
+                                <li>
+                                    <p>электронная почта</p>
+                                    <a href="mailto:info@pdtm.ru">info@pdtm.ru</a>
+                                </li>
+                                <li>
+                                    <p>наши социальные сети</p>
+                                    <ul class="contacts-info__socials">
+                                        <li>
+                                            <a href="https://rutube.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Rutube">
+                                                <img src="./images/rutube.svg" alt="Иконка Rutube" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал YouTube">
+                                                <img src="./images/youtube.svg" alt="Иконка YouTube" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://vk.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Vk">
+                                                <img src="./images/vk.svg" alt="Иконка Vk" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://telegram.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Telegram">
+                                                <img src="./images/telegram.svg" alt="Иконка Telegram" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://max.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Max">
+                                                <img src="./images/max.svg" alt="Иконка Max" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dzen.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Dzen">
+                                                <img src="./images/dzen.svg" alt="Иконка Dzen" width="24" height="24" loading="lazy" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="contacts-document">
+                                <div class="contacts-document__icon">
+                                    <img src="./images/document.svg" alt="Иконка документа" width="64" height="64" loading="lazy" />
+                                </div>
+                                <div class="contacts-document__content">
+                                    <h3 class="title-4 contacts-document__title">Документы и лицензии</h3>
+                                    <a href="documents-credentials.html" class="link contacts-document__link"><span>Перейти в раздел</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form">
+                            <div class="form-inner">
+                                <label for="company" class="visually-hidden">Название компании</label>
+                                <input type="text" name="company" id="company" placeholder="Название компании*" required />
+                                <!-- выводить, если есть ошибка  -->
+                                <!-- <span class="form-error">Текст ошибки</span> -->
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-inner">
+                                    <label for="name" class="visually-hidden">Ваше Имя</label>
+                                    <input type="text" name="name" id="name" placeholder="Ваше Имя*" required />
+                                    <!-- выводить, если есть ошибка  -->
+                                    <!-- <span class="form-error">Текст ошибки</span> -->
+                                </div>
+                                <div class="form-inner">
+                                    <label for="job_title" class="visually-hidden">Должность</label>
+                                    <input type="text" name="job_title" id="job_title" placeholder="Должность" />
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-inner">
+                                    <label for="phone" class="visually-hidden">Телефон*</label>
+                                    <input type="text" name="phone" id="phone" placeholder="Телефон*" required />
+                                    <!-- выводить, если есть ошибка  -->
+                                    <!-- <span class="form-error">Текст ошибки</span> -->
+                                </div>
+                                <div class="form-inner">
+                                    <label for="email" class="visually-hidden">Электронная почта*</label>
+                                    <input type="email" name="email" id="email" placeholder="Электронная почта*" required />
+                                    <!-- выводить, если есть ошибка  -->
+                                    <!-- <span class="form-error">Текст ошибки</span> -->
+                                </div>
+                            </div>
+                            <div class="form-inner">
+                                <label for="message" class="visually-hidden">Расскажите подробнее о том, что вам потребуется</label>
+                                <textarea id="message" name="message" placeholder="Расскажите подробнее о том, что вам потребуется"></textarea>
+                            </div>
+                            <div class="form-file">
+                                <div class="form-file__inner">
+                                    <div class="form-file__btn">
+                                        <input type="file" name="file" id="file" accept=".png, .jpeg, .pdf" />
+                                        <button type="button">прикрепить файл</button>
+                                    </div>
+                                    <p class="form-file__name">Файл не выбран</p>
+                                </div>
+                                <p class="form-file__warning">Файл не более 5 мб, в формате png, jpeg, pdf</p>
+                                <!-- выводить, если есть ошибка  -->
+                                <!-- <span class="form-error">Текст ошибки</span> -->
+                            </div>
+                            <button type="submit" class="base-button blue-button form-button"><span>Отправить форму</span><i></i></button>
+                            <div class="form-checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox" required />
+                                <label for="checkbox">Нажимая на кнопку, я даю согласие на обработку своих персональных данных в соответствии с&nbsp;<a href="policy.html">Условиями Политики</a></label>
+                                <!-- выводить, если есть ошибка  -->
+                                <!-- <span class="form-error">Текст ошибки</span> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-top">
+                        <a href="index.html" class="footer-top__logo">
+                            <img src="./images/logo.svg" alt="Логотип" width="287" height="56" loading="lazy" />
+                        </a>
+                        <nav class="footer-top__menu">
+                            <ul>
+                                <li><a href="about.html">О компании</a></li>
+                                <li><a href="news.html">Новости и статьи</a></li>
+                                <li><a href="questionnaires.html">Опросные листы</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-center">
+                        <div class="footer-center__navs">
+                            <nav class="footer-center__nav">
+                                <p class="footer-center__nav-title">Продукция</p>
+                                <ul class="footer-center__nav-list">
+                                    <li><a href="category-product.html">Грузоподъемное оборудование</a></li>
+                                    <li><a href="category-product.html">Оборудование для перевалки сыпучих грузов</a></li>
+                                    <li><a href="category-product.html">Стендовое оборудование</a></li>
+                                    <li><a href="category-product.html">Нестандартное оборудование</a></li>
+                                    <li><a href="category-product.html">Оборудование для судостроения и судоремонта</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="footer-center__nav">
+                                <p class="footer-center__nav-title">Дистрибуция</p>
+                                <ul class="footer-center__nav-list">
+                                    <li><a href="category-distribution.html">Название категории из дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название еще одной категории дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название категории из дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название категории из дистрибуции</a></li>
+                                    <li><a href="category-distribution.html">Название еще одной категории дистрибуции</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <ul class="footer-center__contacts">
+                            <li>
+                                <p class="footer-center__contacts-title">наши социальные сети</p>
+                                <ul class="footer-center__socials">
+                                    <li>
+                                        <a href="https://rutube.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Rutube">
+                                            <img src="./images/rutube.svg" alt="Иконка Rutube" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал YouTube">
+                                            <img src="./images/youtube.svg" alt="Иконка YouTube" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://vk.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Vk">
+                                            <img src="./images/vk.svg" alt="Иконка Vk" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://telegram.com" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Telegram">
+                                            <img src="./images/telegram.svg" alt="Иконка Telegram" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://max.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Max">
+                                            <img src="./images/max.svg" alt="Иконка Max" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dzen.ru" target="_blank" rel="noopener noreferrer" aria-label="Перейти на наш канал Dzen">
+                                            <img src="./images/dzen.svg" alt="Иконка Dzen" width="24" height="24" loading="lazy" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="footer-center__contacts-title">телефон для связи</p>
+                                <ul class="footer-center__contact">
+                                    <li><a href="tel:+7 (812) 708-88-78">+7 (812) 708-88-78</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="footer-center__contacts-title">электронная почта</p>
+                                <ul class="footer-center__contact">
+                                    <li><a href="mailto:info@pdtm.ru">info@pdtm.ru</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" download class="base-button white-button footer-center__download"><span>Скачать карту партнера</span><i></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>© 2026 ООО «ПО «Подъемтрансмаш»</p>
+                        <a href="#!" target="_blank" rel="noopener noreferrer">Карта сайта</a>
+                        <a href="policy.html">Политика конфиденциальности</a>
+                        <a href="terms-of-service.html">Правила пользования сайтом</a>
+                        <div class="footer-bottom__developer">
+                            <p>Разработка сайта:</p>
+                            <a href="#!" target="_blank" rel="noopener noreferrer">
+                                <img src="./images/developer-logo.svg" alt="Логотип Крупное Дело" width="83" height="30" loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/choices.min.js"></script>
+        <script src="./js/simplebar.min.js"></script>
+        <script src="./js/glightbox.min.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
