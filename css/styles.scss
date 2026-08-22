@@ -1700,15 +1700,28 @@ h5,
 }
 
 // documents-list
-.documents-block {
+.documents {
     margin-top: fluid(24px, 50px);
+}
+.documents-credentials {
     column-gap: fluid(14px, 20px);
     row-gap: fluid(14px, 40px);
+}
+.documents-collateral {
+    gap: 20px;
 }
 .documents-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+.documents-block {
+    border-radius: 10px;
+    padding: fluid(20px, 32px);
+    background-color: var(--background-1);
+}
+.documents-block__title {
+    margin-bottom: fluid(20px, 30px);
 }
 .document {
     border-radius: fluid(6px, 10px);
@@ -2945,5 +2958,9 @@ h5,
         span {
             line-height: 138%;
         }
+    }
+
+    .documents-block__title {
+        letter-spacing: -0.01rem;
     }
 }
