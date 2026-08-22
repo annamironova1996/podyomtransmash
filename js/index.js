@@ -292,6 +292,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Слайдер (slider-tabs)
+    const sliderTabs = document.querySelectorAll('.slider-tabs');
+
+    sliderTabs.forEach((slider) => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+
+            breakpoints: {
+                1590: {
+                    slidesPerView: 'auto',
+                },
+            },
+        });
+    });
+
     // Слайдер (2)
     const slider2 = document.querySelectorAll('.slider-2');
     if (slider2) {
